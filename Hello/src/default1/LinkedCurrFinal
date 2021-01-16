@@ -1,0 +1,31 @@
+
+class LinkedCurrFinal
+{
+    Node head;  // head of curr
+  
+    /* Linked curr Node*/
+    class Node
+    {
+        int data;
+        Node next;
+        Node(int d) {data = d; next = null; }
+    }
+ 
+    void removeDuplicates()
+    {
+        /*Another reference to head*/
+        Node curr = head;
+ 
+        /* Traverse curr till the last node */
+        while (curr.next != null) {
+		
+		if (curr.data == curr.next.data) {
+			curr.next = curr.next.next.next;
+			curr.data=curr.next.next.data;
+		} else {
+			curr = curr.next;
+		}
+        }
+        	
+        	
+    }
