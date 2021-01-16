@@ -1,0 +1,59 @@
+  
+import java.util.Arrays;
+import java.util.List;
+import java.text.DecimalFormat;  
+
+class StringSolution {
+public static String restoreString(String s, int[] indices) {
+ 
+//  //iterate the string s and find from s=0 to s.length such that 
+
+ 
+  char ch[]=s.toCharArray();
+
+  for(int i=0;i<s.length();i++)
+     
+  {
+	  
+	  System.out.println(ch[indices[i]]);
+      ch[indices[i]]=s.charAt(i);
+      
+    
+ }
+
+  String data = new String(ch);
+
+ 
+  return data;
+ 
+}
+
+
+
+
+
+public static String restoreString1(String s, int[] indices) {
+    char[] ch=new char[indices.length];
+    for(int i=0;i<s.length();i++)
+    {
+        ch[indices[i]]=s.charAt(i);
+    }
+    return new String(ch);
+}
+
+
+
+public static void main(String args[])
+
+{
+	
+	int a[]= {4,5,6,7,0,2,1,3};
+	
+String newString=restoreString1("leetcode",a);	
+
+System.out.println(newString);
+}
+
+
+}
+
