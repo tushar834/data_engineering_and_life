@@ -1,0 +1,77 @@
+
+
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class ListFinal {
+	public static void main (String[] args) {
+	    String a="aba ";
+	    System.out.println(isPalindrome(a));
+	    
+	}
+
+
+
+
+
+public static boolean isPalindrome(String s) {
+    
+    s = s.replaceAll( 
+      "[^a-zA-Z0-9]", "");
+    
+    System.out.println(s);
+    
+     s = s.replaceAll("\\s", "");
+     
+     System.out.println(s);
+    
+    Boolean b=true;
+    
+   s= s.toLowerCase();
+    
+    
+    StringBuilder input1 = new StringBuilder();
+
+    // append a string into StringBuilder input1
+    input1.append(s);
+
+    // reverse StringBuilder input1
+    input1 = input1.reverse();
+
+    String str = input1.toString();
+    
+    
+    if(str==s)
+        return true;
+    
+    else
+        return false;
+    
+    
+    
+}
+
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
